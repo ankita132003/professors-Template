@@ -53,7 +53,7 @@
                 </div>
                 <div class="image col-lg-8">
                     <h1>About Me</h1>
-                    <p>
+                    <p >
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum quibusdam pariatur totam quam tempore aspernatur optio debitis, hic ducimus. Sequi maiores consequuntur nam corporis cupiditate at dolorem mollitia perspiciatis reprehenderit atque iure cum odit sunt, rem nobis neque itaque eaque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, vel esse deleniti labore dolorum dolores pariatur amet ducimus sunt, veniam exercitationem cumque. Vitae modi similique voluptatibus dolorem veritatis id distinctio minus dolores sunt pariatur est quaerat iste amet libero reprehenderit perspiciatis unde nam ratione consequuntur hic qui, voluptatem, nulla, saepe natus? Excepturi quos qui porro animi dignissimos, aliquid velit rerum, sit deleniti pariatur numquam corrupti blanditiis veniam quod maiores, alias rem enim esse. Vel quas autem possimus ex quis unde ipsa similique, odit eligendi cupiditate nulla maiores, aliquid accusantium hic quo incidunt. Quibusdam maiores aspernatur fuga dignissimos, repellendus id!
                     </p>
 
@@ -173,7 +173,11 @@
                     <h2>Popular Topics</h2>
                 </div>
                 <div class="col-lg-8">
-                    <a href="#"> abcd</a>  <a href="#"> efgh</a>  <a href="#"> klmn</a>  <a href="#"> wvxyz</a>  <a href="#"> abcd</a>
+                    <a href="#" style="font-size: 15px; font-weight: 600; text-decoration: none;"> abcd</a> 
+                     <a href="#" style="font-size: 25px; font-weight: 400; padding-left: 5px; text-decoration: none;"> efgh</a> 
+                      <a href="#"> klmn</a>
+                        <a href="#"> wvxyz</a>
+                          <a href="#"> abcd</a>
                 </div>
             </div>
             </div>
@@ -181,7 +185,7 @@
     </section>
     
 </body>
-<script>
+<!-- <script>
     const navbar = document.getElementById('navbar');
     const darkModeToggle = document.getElementById('darkModeToggle');
 
@@ -193,7 +197,28 @@
     }
 
     darkModeToggle.addEventListener('click', toggleDarkMode);
+</script> -->
+<script>
+    // Get all the links inside navbar-nav
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    // Function to handle click event on navigation links
+    function handleNavClick(event) {
+        // Remove the 'active' class from all links
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+
+        // Add the 'active' class to the clicked link
+        event.target.classList.add('active');
+    }
+
+    // Attach click event listeners to each navigation link
+    navLinks.forEach(link => {
+        link.addEventListener('click', handleNavClick);
+    });
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </html>
